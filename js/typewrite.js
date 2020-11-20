@@ -8,8 +8,8 @@
             blinkingCursor: true,
             cursor: '|',
             selectedBackground: '#F1F1F1',
-            selectedText: '#333333',
-            continuous: false
+            selectedText: '#444444',
+            continuous: true
         }, options);
 
         // set the blink speed of the cursor

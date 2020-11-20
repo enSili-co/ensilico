@@ -1,7 +1,7 @@
 <p align=center>
-  <img height="150px" src="https://github.com/enSili-co/ensili.co/raw/main/images/logo.png"/>
+  <img height="150px" src="https://github.com/enSili-co/ensili.co/raw/main/images/ensilico.png"/>
 </p>
-<h1 align=center>enSili.co website</h1>
+<h3 align=center>enSili.co</h3>
 
 ---
 

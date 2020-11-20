@@ -71,4 +71,8 @@ main {
   font-size: 13px;
   padding: 1.5em !important; }
 
+a:hover h3 {
+  text-decoration: none;
+  color: black; }
+
 /*# sourceMappingURL=style.css.map */

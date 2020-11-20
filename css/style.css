@@ -45,7 +45,7 @@ main {
   transition-timing: ease-in-out;
   filter: grayscale(0.7);
   opacity: 0.5; }
-  .panel .panel-footer h3 {
+  .panel .panel-footer h2 {
     text-align: center;
     font-weight: 600;
     font-size: 1.2em; }
@@ -71,7 +71,7 @@ main {
   font-size: 13px;
   padding: 1.5em !important; }
 
-a:hover h3 {
+a:hover h2 {
   text-decoration: none !important;
   color: black; }
 

@@ -25,7 +25,7 @@ main {
     font-weight: 300; }
     .nav-item a:hover {
       color: black !important; }
-  .nav-item:not(.active) a::after {
+  .nav-item:not(.active) a:not(.twitter-link)::after {
     position: absolute;
     content: "";
     height: .3em;
@@ -36,9 +36,11 @@ main {
     right: 0;
     transform: scaleX(0);
     transition: transform 0.5s cubic-bezier(0.95, 0.05, 0.795, 0.035); }
-  .nav-item:not(.active) a:hover::after {
+  .nav-item:not(.active) a:not(.twitter-link):hover::after {
     transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
     transform: scaleX(1); }
+  .nav-item:not(.active) a.twitter-link:hover {
+    color: #1FA1F1; }
 
 .panel .panel-footer {
   transition: all .6s;
@@ -58,13 +60,6 @@ main {
 .panel:hover .panel-footer {
   filter: grayscale(0);
   opacity: 1; }
-
-#sending {
-  display: none; }
-
-#sent {
-  display: none;
-  color: green; }
 
 .tooltipster-content {
   font-family: Rubik;
@@ -106,5 +101,12 @@ a:hover {
   -ms-animation: rotating 2s linear infinite;
   -o-animation: rotating 2s linear infinite;
   animation: rotating 2s linear infinite; }
+
+#sending {
+  display: none; }
+
+#sent {
+  display: none;
+  color: green; }
 
 /*# sourceMappingURL=style.css.map */

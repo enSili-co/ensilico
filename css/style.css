@@ -40,7 +40,7 @@ main {
     transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
     transform: scaleX(1); }
   .nav-item:not(.active) a.twitter-link:hover {
-    color: #1FA1F1; }
+    color: #1FA1F1 !important; }
 
 .panel .panel-footer {
   transition: all .6s;

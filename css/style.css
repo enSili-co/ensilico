@@ -15,7 +15,8 @@ main {
   border-top: 2px solid black; }
 
 .nav-item {
-  padding-left: 1em; }
+  padding-left: 1em;
+  font-variant: small-caps; }
   .nav-item.active a {
     font-weight: 600; }
   .nav-item a {

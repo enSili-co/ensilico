@@ -41,6 +41,9 @@ main {
     transform: scaleX(1); }
   .nav-item:not(.active) a.twitter-link:hover {
     color: #1FA1F1 !important; }
+  .nav-item.last {
+    border-right: 1px solid darkgray;
+    padding-right: 1em; }
 
 .panel .panel-footer {
   transition: all .6s;

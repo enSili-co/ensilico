@@ -16,7 +16,7 @@ main {
 
 .nav-item {
   padding-left: 1em;
-  font-variant: small-caps; }
+  font-size: 10px; }
   .nav-item.active a {
     font-weight: 600; }
   .nav-item a {

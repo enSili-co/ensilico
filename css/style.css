@@ -45,6 +45,10 @@ main {
     border-right: 1px solid darkgray;
     padding-right: 1em; }
 
+.navbar-collapse.collapsing .nav-item.last,
+.navbar-collapse.show .nav-item.last {
+  border-right: 0; }
+
 .panel .panel-footer {
   transition: all .6s;
   transition-timing: ease-in-out;

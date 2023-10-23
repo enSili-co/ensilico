@@ -149,6 +149,7 @@ a:hover {
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, sans-serif !important;
+  background: #fbfbfd !important;
 }
 
 .modal-body {

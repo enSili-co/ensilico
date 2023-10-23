@@ -147,4 +147,13 @@ a:hover {
   color: green;
 }
 
+body {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif !important;
+}
+
+.modal-body {
+  color: #666;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
 /*# sourceMappingURL=style.css.map */

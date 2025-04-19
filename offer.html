@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Mac App Bundle – enSili.co</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Get the enSili.co Mac App Bundle – A handpicked set of high-quality tools at a one-time discount.">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/gh/enSili-co/ensilico@0.174/css/themify-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    html, body {
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+    }
+    body {
+      font-family: "Rubik", -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #fbfbfd;
+      color: #333;
+      padding: 2em 0 0 0; /* Removed left/right padding */
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    a, a:visited, a:active, a:hover {
+      text-decoration: none;
+      color: inherit;
+    }
+    a:hover {
+        color: #fff;
+    }
+    main {
+      flex: 1;
+      position: relative;
+      width: 100%;
+      padding-top:4rem;
+    }
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 0.3em;
+      font-weight: bold;
+    }
+    h2 {
+      font-size: 1.5em;
+      margin-top: 2em;
+      margin-bottom: 1em;
+    }
+    p {
+      font-size: 1.1em;
+      max-width: 600px;
+      margin: 0 auto 2em;
+      line-height: 1.6;
+    }
+    .bundle-info {
+      margin: 2em 0 3em;
+      padding-bottom: 4rem;
+      border-bottom: 5px solid #f2f2f2;
+    }
+    .cta-button {
+      font-size: 1.2em;
+      background: #000;
+      color: #fff;
+      padding: 0.8em 1.5em;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 0.5em;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      transition: all 0.3s ease-in-out;
+    }
+    .cta-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+      background-color: #1a1a1a;
+      color: #fff;
+    }
+    .apps {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2em;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .app {
+      width: 140px;
+    }
+    .app img {
+      width: 100%;
+      transition: transform 0.6s ease-in-out;
+    }
+    .app:hover img {
+      transform: rotate(360deg);
+    }
+    .app h3 {
+      font-size: 1em;
+      font-weight: 600;
+      margin-top: 0.5em;
+      opacity: 0.8;
+    }
+    .app:hover h3 {
+        color: #000;
+    }
+    .notice {
+      font-size: 0.95em;
+      color: #777;
+      margin-top: 4em;
+    }
+    .payment-methods {
+        margin-top: 4em;
+        padding-top: 1em;
+        border-top: 5px solid #f2f2f2;;
+        padding-bottom: 1.5rem;
+        color: #aaa;
+    }
+    .payment-methods i {
+      margin: 0 8px;
+      color: #ccc;
+    }
+    .payment-methods i:hover {
+      color: #aaa;
+      transition: color 0.3s ease-in-out;
+    }
+
+    .payment-methods-text {
+      font-size: 0.8em;
+      color: #999;
+      margin-bottom: 0.5em;
+    }
+    #countdown {
+      font-size: 0.9em;
+      font-weight: 500;
+      color: #cc0000;
+      display: inline-block;
+      padding: 0.4em 1.2em;
+      border-radius: 6px;
+      font-variant-numeric: tabular-nums;
+      min-width: 200px;
+    }
+    #popupModal {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: white;
+      padding: 2em;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      border-radius: 10px;
+      z-index: 1000;
+    }
+    #popupModal button {
+      margin-top: 1em;
+      padding: 0.5em 1em;
+    }
+    /* Add to your existing CSS */
+  /* Make sure to keep the basic ribbon styles you already have */
+  .ribbon {
+    width: 250px;
+    background: #cc0000;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    top: 52px;
+    right: -52px;
+    line-height: 40px;
+    transform: rotate(45deg);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    z-index: 999;
+  }
+  
+  /* Add these new styles */
+  .price-wrapper {
+    position: relative;
+    display: inline-block;
+    height: 100%;
+  }
+  
+  .price {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .strike {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 0;
+    height: 2px;
+    background: white;
+    transform: translateY(-50%);
+  }
+    
+    /* Footer styles */
+    footer {
+      padding: 2em 0;
+      background: #f2f2f2;
+      width: 100%;
+      box-sizing: border-box;
+      margin: 0; /* Ensure no margin on footer */
+    }
+    footer img {
+      opacity: 0.5;
+    }
+    .my-5 {
+      margin-top: 0rem !important;
+      margin-bottom: 0 !important;
+    }
+    .container {
+      width: 100%;
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-right: auto;
+      margin-left: auto;
+      max-width: 1140px;
+    }
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      margin-right: -15px;
+      margin-left: -15px;
+    }
+    .col-lg-6 {
+      position: relative;
+      width: 100%;
+      min-height: 1px;
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+    .mb-2 {
+      margin-bottom: 0.5rem !important;
+    }
+    .copyrightable {
+      color: #959094;
+      font-size: 0.8rem;
+    }
+    .trademarks {
+      color: #959094;
+      font-size: 0.8rem;
+    }
+    
+    @media (min-width: 992px) {
+      .col-lg-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+      }
+    }
+
+    /* Responsive tweaks for mobile */
+    @media (max-width: 991px) {
+      .trademarks {
+        display: none;
+      }
+      .copyrightable {
+        text-align: center;
+      }
+    }
+    
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.8em;
+      }
+      #countdown {
+        font-size: 0.8em;
+      }
+      p {
+        font-size: 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="ribbon">
+        <div class="price-wrapper">
+          <div class="price" id="price"></div>
+        </div>
+    </div>
+      
+    <h1>🔥 Spring<br>Mac Bundle</h1>
+    <p>
+      A carefully curated selection of<br>
+      <strong id="app-count"></strong> beautiful, high-quality Mac apps –<br>
+      all yours for one brutally discounted price.
+    </p>
+
+    <div class="bundle-info">
+        <a href="#" class="cta-button" onclick="openCheckout()">Get the Bundle</a><br>
+      <div id="countdown">⏳ <b>Time left:</b> <span id="timer"></span></div>
+      
+    </div>
+
+    <h2>Included Apps</h2>
+    <div class="apps"></div>
+
+    <p class="notice">
+      One-time purchase · No subscriptions · Instant download
+    </p>
+    
+    <div class="payment-methods">
+      <div class="payment-methods-text">Powered by Paddle</div>
+      <i class="fab fa-cc-visa fa-2x"></i>
+      <i class="fab fa-cc-mastercard fa-2x"></i>
+      <i class="fab fa-cc-amex fa-2x"></i>
+      <i class="fab fa-paypal fa-2x"></i>
+      <i class="fab fa-apple-pay fa-2x" style="transform: scale(1.2);"></i>
+    </div>
+
+    <div id="popupModal">
+      <h3>🎉 Special Offer!</h3>
+      <p>You've unlocked a bonus! Use code <b>WELCOME10</b> at checkout.</p>
+      <button onclick="document.getElementById('popupModal').style.display='none'">Close</button>
+    </div>
+  </main>
+
+  <footer class="my-5 text-center">
+    <div class="container" style="text-align:left">
+      <div class="row">
+        <div class="col-lg-6">
+          <p class="mb-2 copyrightable">
+            <img src="https://cdn.jsdelivr.net/gh/enSili-co/yummy@0.30/images/ensilico.png" alt="enSili.co Logo" width="150">
+          </p>
+        </div>
+        <div class="col-lg-6 trademarks" style="text-align:right">
+          <small>*Apple, Mac and the Apple logo<br>are trademarks of Apple Inc., registered in the U.S. and other countries.</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true });
+
+    const apps = document.querySelector('.apps');
+    const appList = [
+      { name: "WiFi Radar Pro", img: "wifiradarpro@0.35", url: "https://wifiradar.app" },
+     /* { name: "Yummy", img: "yummy@0.89", url: "https://ensili.co/app/yummy/" },*/
+      { name: "QR Wizard", img: "qrwizard@0.6", url: "https://qrwiz.app" },
+      { name: "Erazor", img: "erazor@0.5", url: "https://ensili.co/app/erazor/" },
+      { name: "AI Bundler", img: "aibundler", url: "https://ensili.co/app/aibundler/" },
+      { name: "Color Hound", img: "colorhound@0.6", url: "https://ensili.co/app/colorhound" },
+      { name: "Watermarker+", img: "watermarkerplus@0.6", url: "https://ensili.co/app/watermarkerplus" },
+      { name: "Squeezer", img: "codesqueezer@0.10", url: "https://codesqueezer.app" },
+      { name: "Markdown+", img: "markdownplus@0.8", url: "https://ensili.co/app/markdownplus" },
+      { name: "Colori", img: "colori@0.11", url: "https://ensili.co/app/colori" },
+      { name: "ToAnything", img: "toanything@0.9", url: "https://ensili.co/app/toanything" },
+      { name: "CodeCounter", img: "codecounter@0.12", url: "https://ensili.co/app/codecounter" },
+      { name: "Iconize", img: "iconize@0.27", url: "https://ensili.co/app/iconize" },
+      { name: "Tidier", img: "tidier@0.6", url: "https://ensili.co/app/tidier" },
+      { name: "DMG Wizard", img: "dmgwizard@0.6", url: "https://ensili.co/app/dmgwizard" },
+      { name: "Web2Mac", img: "web2mac@0.9", url: "https://ensili.co/app/web2mac" },
+      { name: "AllClips", img: "allclips@0.4", url: "https://ensili.co/app/allclips" },
+      { name: "SpeakMe 3", img: "speakme@0.48", url: "https://ensili.co/app/speakme" },
+      { name: "PhotoFoundry", img: "photofoundry@0.29", url: "https://ensili.co/app/photofoundry" },
+      { name: "JSON Wizard", img: "jsonwizard@0.19", url: "https://jsonwizard.app" },
+      { name: "AppKiller", img: "appkiller@0.8", url: "https://ensili.co/app/appkiller" },
+      { name: "FileUnhider", img: "fileunhider@0.8", url: "https://ensili.co/app/fileunhider" }
+    ];
+
+    document.getElementById("app-count").innerText = appList.length;
+
+    appList.forEach((app, i) => {
+      const el = document.createElement('div');
+      el.className = 'app';
+      el.setAttribute('data-aos', 'fade-up');
+      el.setAttribute('data-aos-delay', i * 100);
+      var logoName = 'logo';
+      if (app.name=='ToAnything'){
+        logoName += '_original';
+      }
+      el.innerHTML = `
+        <a href="${app.url}" target="_blank" rel="noopener">
+          <img src="https://cdn.jsdelivr.net/gh/enSili-co/${app.img}/images/${logoName}.png" alt="${app.name}" />
+          <h3>${app.name}</h3>
+        </a>
+      `;
+      apps.appendChild(el);
+    });
+
+    function openCheckout() {
+      Paddle.Checkout.open({
+        product: 123456,
+        successCallback: () => alert("Thanks for purchasing! 🎉")
+      });
+    }
+
+    const endDate = new Date("2025-05-01T23:59:59").getTime();
+    const timerEl = document.getElementById("timer");
+    setInterval(() => {
+      const now = new Date().getTime();
+      const dist = endDate - now;
+      if (dist <= 0) return timerEl.innerText = "Expired";
+      const d = Math.floor(dist / (1000 * 60 * 60 * 24));
+      const h = Math.floor((dist % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const m = Math.floor((dist % (1000 * 60 * 60)) / (1000 * 60));
+      const s = Math.floor((dist % (1000 * 60)) / 1000);
+      timerEl.innerText = `${d}d ${h}h ${m}m ${s}s`;
+    }, 1000);
+
+    if (window.location.search.includes("popup")) {
+      setTimeout(() => {
+        document.getElementById("popupModal").style.display = 'block';
+      }, 1000);
+    }
+
+    function initPriceAnimation() {
+    const priceElement = document.getElementById('price');
+    const strikeElement = document.createElement('div');
+    strikeElement.className = 'strike';
+    
+    function animatePriceChange() {
+      // Start with old price
+      priceElement.textContent = 'Before: €299.99';
+      priceElement.appendChild(strikeElement);
+      
+      // Animate strike-through after a short delay
+      setTimeout(() => {
+        strikeElement.style.transition = 'width 1s ease';
+        strikeElement.style.width = '100%';
+      }, 1000);
+      
+      // Change to new price
+      setTimeout(() => {
+        priceElement.textContent = 'Only €24.99!';
+      }, 2500);
+      
+      // Reset after a longer display of the new price
+      setTimeout(() => {
+        strikeElement.style.transition = 'none';
+        strikeElement.style.width = '0';
+        animatePriceChange();
+      }, 10000);
+    }
+    
+    animatePriceChange();
+  }
+  
+  // Initialize the animation when DOM is loaded
+  document.addEventListener('DOMContentLoaded', initPriceAnimation);
+  </script>
+  <script src="https://cdn.paddle.com/paddle/paddle.js"></script>
+  <script>Paddle.Setup({ vendor: 8559 });</script>
+</body>
+</html>

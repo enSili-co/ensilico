@@ -288,7 +288,7 @@
     <h1>🔥 Spring<br>Mac Bundle</h1>
     <p>
       A carefully curated selection of<br>
-      <strong id="app-count"></strong> beautiful, high-quality Mac apps –<br>
+      <strong id="app-count"></strong> beautiful, high-quality macOS apps –<br>
       all yours for one brutally discounted price.
     </p>
 
@@ -388,12 +388,12 @@
 
     function openCheckout() {
       Paddle.Checkout.open({
-        product: 123456,
+        product: 909175,
         successCallback: () => alert("Thanks for purchasing! 🎉")
       });
     }
 
-    const endDate = new Date("2025-05-01T23:59:59").getTime();
+    const endDate = new Date("2025-05-08T23:59:59").getTime();
     const timerEl = document.getElementById("timer");
     setInterval(() => {
       const now = new Date().getTime();
@@ -419,7 +419,7 @@
     
     function animatePriceChange() {
       // Start with old price
-      priceElement.textContent = 'Before: €299.99';
+      priceElement.textContent = 'Over 80% off!';
       priceElement.appendChild(strikeElement);
       
       // Animate strike-through after a short delay
@@ -430,7 +430,7 @@
       
       // Change to new price
       setTimeout(() => {
-        priceElement.textContent = 'Only €24.99!';
+        priceElement.textContent = 'Only $29.99';
       }, 2500);
       
       // Reset after a longer display of the new price

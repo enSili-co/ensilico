@@ -458,6 +458,12 @@
       }, 1000);
     }
 
+    if (window.location.search.includes("popup")) {
+      setTimeout(() => {
+        openCheckout();
+      }, 2000);
+    }
+
     function initPriceAnimation() {
     const priceElement = document.getElementById('price');
     const strikeElement = document.createElement('div');

@@ -316,7 +316,7 @@
 
     <div id="popupModal">
       <h3>🎉 Special Offer!</h3>
-      <p>You've unlocked a bonus! Use code <b>WELCOME10</b> at checkout.</p>
+      <p>You've unlocked a bonus! Use code <b>SPRING10OFF</b> at checkout.</p>
       <button onclick="document.getElementById('popupModal').style.display='none'">Close</button>
     </div>
   </main>
@@ -406,7 +406,7 @@
       timerEl.innerText = `${d}d ${h}h ${m}m ${s}s`;
     }, 1000);
 
-    if (window.location.search.includes("popup")) {
+    if (window.location.search.includes("10off")) {
       setTimeout(() => {
         document.getElementById("popupModal").style.display = 'block';
       }, 1000);

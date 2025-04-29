@@ -293,7 +293,7 @@
     </p>
 
     <div class="bundle-info">
-        <a href="#" class="cta-button" onclick="openCheckout()">Get the Bundle</a><br>
+        <a href="#" class="cta-button" onclick="openCheckout(null)">Get the Bundle</a><br>
       <div id="countdown">⏳ <b>Time left:</b> <span id="timer"></span></div>
       
     </div>
@@ -317,7 +317,8 @@
     <div id="popupModal">
       <h3>🎉 Exclusive Offer!</h3>
       <p>You've unlocked a bonus!<br>Use code <b>SPRING10OFF</b> at checkout.</p>
-      <button onclick="document.getElementById('popupModal').style.display='none'; openCheckout();">Thanks!</button>
+      <button onclick="document.getElementById('popupModal').style.display='none'; openCheckout('SPRING10OFF');">I want it!</button>
+      <button onclick="document.getElementById('popupModal').style.display='none';">No thanks :(</button>
     </div>
   </main>
 
@@ -386,9 +387,10 @@
       apps.appendChild(el);
     });
 
-    function openCheckout() {
+    function openCheckout(discountCode) {
       Paddle.Checkout.open({
         product: 909175,
+        discountCode: discountCode,
         successCallback: () => alert("Thanks for purchasing! 🎉")
       });
     }
